@@ -1,0 +1,24 @@
+{
+  "name": "HBKit",
+  "version": "0.4.0",
+  "summary": "A  Fast Style TableViewController.",
+  "homepage": "https://github.com/Natoto/HBFastTableViewCotroller",
+  "license": "MIT",
+  "authors": {
+    "nonato ": "787038442@qq.com"
+  },
+  "platforms": {
+    "ios": "6.0"
+  },
+  "source": {
+    "git": "https://github.com/Natoto/HBFastTableViewCotroller.git",
+    "tag": "0.4.0"
+  },
+  "source_files": "HBKit/**/*.{h,m}",
+  "requires_arc": true,
+  "dependencies": {
+    "MJRefresh": [
+      "~> 2.2.0"
+    ]
+  }
+}

@@ -1,0 +1,1 @@
+../../../HBKit/HBKit/HBBaseCollectionViewCell.h
