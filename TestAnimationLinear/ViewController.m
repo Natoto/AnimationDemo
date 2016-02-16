@@ -12,45 +12,90 @@
 #import "BaseAnimationController.h"
 #import "GroupAnimationController.h"
 #import "KeyFrameAnimationController.h"
+#import "GradientLayerViewController.h"
+#import "ScrollLabelViewController.h"
+#import "LoadingViewController.h"
 
 @interface ViewController ()
-@property(nonatomic,strong) NSArray * array;
+AS_CELL_STRUCT_COMMON(transition)
+AS_CELL_STRUCT_COMMON(baseanimation)
+AS_CELL_STRUCT_COMMON(keyframeanimation)
+AS_CELL_STRUCT_COMMON(groupanimation)
+AS_CELL_STRUCT_COMMON(affineanimation)
+AS_CELL_STRUCT_COMMON(compositeanimation)
+AS_CELL_STRUCT_COMMON(gradientanimation)
+AS_CELL_STRUCT_COMMON(scrolllabel)
+AS_CELL_STRUCT_COMMON(loadingview)
 @end
 
+
 @implementation ViewController
+GET_CELL_STRUCT_WITH(transition, 过渡动画-Transition)
+GET_CELL_STRUCT_WITH(baseanimation, 基础动画)
+GET_CELL_STRUCT_WITH(keyframeanimation, 关键帧动画)
+GET_CELL_STRUCT_WITH(groupanimation, 组动画)
+GET_CELL_STRUCT_WITH(affineanimation, 仿射变幻)
+GET_CELL_STRUCT_WITH(compositeanimation, 综合动画)
+GET_CELL_STRUCT_WITH(gradientanimation, 渐变色)
+GET_CELL_STRUCT_WITH(scrolllabel, text)
+GET_CELL_STRUCT_WITH(loadingview, 加载动画)
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSArray * titles = @[@"过渡动画-Transition",@"基础动画",@"关键帧动画",@"组动画",@"仿射变幻",@"综合"];
-    self.array = titles;
-
-    [titles enumerateObjectsUsingBlock:^(NSString * obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        CELL_STRUCT * cellstruct = [CELL_STRUCT cell_x_x_struct:obj detailvalue:nil target:self selectAction:DEFAULT_CELL_SELECT_ACTION];
-        [self.dataDictionary setObject:cellstruct forKey:KEY_INDEXPATH(0, idx)];
-    }];
+    
+    int sectionIndex = 0;
+    int rowIndex = 0;
+    [self.dataDictionary setObject:self.cell_struct_transition forKey:KEY_INDEXPATH(sectionIndex, rowIndex++)];
+    [self.dataDictionary setObject:self.cell_struct_baseanimation forKey:KEY_INDEXPATH(sectionIndex, rowIndex++)];
+    [self.dataDictionary setObject:self.cell_struct_keyframeanimation forKey:KEY_INDEXPATH(sectionIndex, rowIndex++)];
+    [self.dataDictionary setObject:self.cell_struct_gradientanimation forKey:KEY_INDEXPATH(sectionIndex, rowIndex++)];
+    [self.dataDictionary setObject:self.cell_struct_affineanimation forKey:KEY_INDEXPATH(sectionIndex, rowIndex++)];
+    [self.dataDictionary setObject:self.cell_struct_compositeanimation forKey:KEY_INDEXPATH(sectionIndex, rowIndex++)];
+   
+    sectionIndex++;
+    rowIndex = 0;
+    [self.dataDictionary setObject:self.cell_struct_gradientanimation forKey:KEY_INDEXPATH(sectionIndex, rowIndex++)];
+    [self.dataDictionary setObject:self.cell_struct_scrolllabel forKey:KEY_INDEXPATH(sectionIndex, rowIndex++)];
+    [self.dataDictionary setObject:self.cell_struct_loadingview forKey:KEY_INDEXPATH(sectionIndex, rowIndex++)];
+    
 }
 GET_CELL_SELECT_ACTION(cellstruct)
 {
-    if ([cellstruct.title isEqualToString:self.array[0]]) {
+    if (cellstruct == self.cell_struct_transition) {
         TransitionViewController * ctr = [[TransitionViewController alloc] init];
         [self.navigationController pushViewController:ctr animated:YES];
     }
-    else  if ([cellstruct.title isEqualToString:self.array[1]]) {
+    else  if (cellstruct == self.cell_struct_baseanimation) {
         BaseAnimationController *  ctr = [[BaseAnimationController alloc] init];
         [self.navigationController pushViewController:ctr animated:YES];
     }
-    else  if ([cellstruct.title isEqualToString:self.array[3]])
+    else  if (cellstruct == self.cell_struct_groupanimation)
     {
         GroupAnimationController *  ctr = [[GroupAnimationController alloc] init];
         [self.navigationController pushViewController:ctr animated:YES];
     }
-    else  if ([cellstruct.title isEqualToString:self.array[2]])
+    else  if (cellstruct == self.cell_struct_keyframeanimation)
     {
         KeyFrameAnimationController *  ctr = [[KeyFrameAnimationController alloc] init];
         [self.navigationController pushViewController:ctr animated:YES];
     }
-    
+    else  if (cellstruct == self.cell_struct_gradientanimation)
+    {
+        GradientLayerViewController * ctr = [[GradientLayerViewController alloc] init];
+        [self.navigationController pushViewController:ctr animated:YES];
+    }
+    else if(cellstruct == self.cell_struct_scrolllabel)
+    {
+        ScrollLabelViewController * ctr = [[ScrollLabelViewController alloc] init];
+        [self.navigationController pushViewController:ctr animated:YES];
+    }    
+    else if(cellstruct == self.cell_struct_loadingview)
+    {
+        LoadingViewController * ctr = [LoadingViewController new];
+        [self.navigationController pushViewController:ctr animated:YES];
+    }
 }
+
 -(void)viewDidAppear:(BOOL)animated
 {
     

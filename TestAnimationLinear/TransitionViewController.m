@@ -49,6 +49,7 @@ typedef enum : NSUInteger {
     if ([self respondsToSelector:@selector(setEdgesForExtendedLayout:)]) {//这个是需要的
         self.edgesForExtendedLayout = UIRectEdgeAll;
     }
+       
     COLLECTIONVIEW_REGISTER_XIB_CELLCLASS(self.collectionView, @"BaseCollectionViewCell");
     // Do any additional setup after loading the view, typically from a nib.
     [self addBgImageWithImageName:IMAGE2];

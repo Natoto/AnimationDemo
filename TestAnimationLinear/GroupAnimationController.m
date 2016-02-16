@@ -122,10 +122,11 @@ GET_CELL_SELECT_ACTION(cellstruct)
 -(void)groupAnimation2{
     CFTimeInterval currentTime = CACurrentMediaTime();
     //位移动画
+    CGFloat beginTime = 0.0f;
     CABasicAnimation *anima1 = [CABasicAnimation animationWithKeyPath:@"position"];
     anima1.fromValue = [NSValue valueWithCGPoint:CGPointMake(0, SCREEN_HEIGHT/2-75)];
     anima1.toValue = [NSValue valueWithCGPoint:CGPointMake(SCREEN_WIDTH/2, SCREEN_HEIGHT/2-75)];
-    anima1.beginTime = currentTime;
+    anima1.beginTime = currentTime + beginTime++;
     anima1.duration = 1.0f;
     anima1.fillMode = kCAFillModeForwards;
     anima1.removedOnCompletion = NO;
@@ -135,7 +136,7 @@ GET_CELL_SELECT_ACTION(cellstruct)
     CABasicAnimation *anima2 = [CABasicAnimation animationWithKeyPath:@"transform.scale"];
     anima2.fromValue = [NSNumber numberWithFloat:0.8f];
     anima2.toValue = [NSNumber numberWithFloat:2.0f];
-    anima2.beginTime = currentTime+1.0f;
+    anima2.beginTime = currentTime + beginTime++;
     anima2.duration = 1.0f;
     anima2.fillMode = kCAFillModeForwards;
     anima2.removedOnCompletion = NO;
@@ -144,11 +145,41 @@ GET_CELL_SELECT_ACTION(cellstruct)
     //旋转动画
     CABasicAnimation *anima3 = [CABasicAnimation animationWithKeyPath:@"transform.rotation"];
     anima3.toValue = [NSNumber numberWithFloat:M_PI*4];
-    anima3.beginTime = currentTime+2.0f;
+    anima3.beginTime = currentTime + beginTime++;
     anima3.duration = 1.0f;
     anima3.fillMode = kCAFillModeForwards;
     anima3.removedOnCompletion = NO;
     [_demoView.layer addAnimation:anima3 forKey:@"cc"];
+    
+    //huangbo added
+    CABasicAnimation *anima4 = [CABasicAnimation animationWithKeyPath:@"transform.rotation"];
+    anima4.toValue = [NSNumber numberWithFloat:-M_PI*4];
+    anima4.beginTime = currentTime + beginTime++;
+    anima4.duration = 1.0f;
+    anima4.fillMode = kCAFillModeForwards;
+    anima4.removedOnCompletion = NO;
+    [_demoView.layer addAnimation:anima4 forKey:@"dd"];
+    
+    
+    CABasicAnimation *anima5 = [CABasicAnimation animationWithKeyPath:@"transform.scale"];
+    anima5.fromValue = [NSNumber numberWithFloat:1.2f];
+    anima5.toValue = [NSNumber numberWithFloat:0.8f];
+    anima5.beginTime = currentTime + beginTime++;
+    anima5.duration = 1.0f;
+    anima5.fillMode = kCAFillModeForwards;
+    anima5.removedOnCompletion = NO;
+    [_demoView.layer addAnimation:anima5 forKey:@"ee"];
+    
+    CABasicAnimation *anima6 = [CABasicAnimation animationWithKeyPath:@"position"];
+    anima6.fromValue = [NSValue valueWithCGPoint:CGPointMake(SCREEN_WIDTH/2, SCREEN_HEIGHT/2-75)];
+    anima6.toValue = [NSValue valueWithCGPoint:CGPointMake(20, SCREEN_HEIGHT/2-75)];
+    anima6.beginTime = currentTime + beginTime++;
+    anima6.duration = 1.0f;
+    anima6.fillMode = kCAFillModeForwards;
+    anima6.removedOnCompletion = NO;
+    [_demoView.layer addAnimation:anima6 forKey:@"ff"];
+    
+    
 }
 
 -(NSString *)controllerTitle{

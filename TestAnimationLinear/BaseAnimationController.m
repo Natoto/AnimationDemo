@@ -7,6 +7,7 @@
 //
 
 #import "BaseAnimationController.h"
+#import "BubleViewController.h"
 
 @interface BaseAnimationController ()
 
@@ -44,7 +45,7 @@
 }
 
 -(NSArray *)operateTitleArray{
-    return [NSArray arrayWithObjects:@"位移",@"透明度",@"缩放",@"旋转",@"背景色", nil];
+    return [NSArray arrayWithObjects:@"位移",@"透明度",@"缩放",@"旋转",@"背景色",@"电灯", nil];
 }
 -(void)viewWillAppear:(BOOL)animated
 {
@@ -68,6 +69,11 @@ GET_CELL_SELECT_ACTION(cellstruct)
     }else if ([cellstruct.title isEqualToString:array[4]]) {
         [self backgroundAnimation];
         
+    }
+    else if([cellstruct.title isEqualToString:array[5]])
+    {
+        BubleViewController * ctr = [[BubleViewController alloc] init];
+        [self.navigationController pushViewController:ctr animated:YES];
     }
 }
 

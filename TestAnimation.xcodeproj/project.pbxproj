@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3305FCD21C3CC2BA00F3367B /* GradientLayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3305FCD11C3CC2BA00F3367B /* GradientLayerViewController.m */; };
+		33117BC31C3CF0AF005177C1 /* BubleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33117BC21C3CF0AF005177C1 /* BubleViewController.m */; };
+		33714F681C73006200F07B3E /* LoadingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33714F671C73006200F07B3E /* LoadingViewController.m */; };
+		33B2592A1C47802C00C985F3 /* Circle.m in Sources */ = {isa = PBXBuildFile; fileRef = 33B259291C47802B00C985F3 /* Circle.m */; };
+		33B2592D1C4790D900C985F3 /* PathCircle.m in Sources */ = {isa = PBXBuildFile; fileRef = 33B2592C1C4790D900C985F3 /* PathCircle.m */; };
 		33FE9DFB1C3B9BD900E95FB1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 33FE9DFA1C3B9BD900E95FB1 /* main.m */; };
 		33FE9DFE1C3B9BD900E95FB1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 33FE9DFD1C3B9BD900E95FB1 /* AppDelegate.m */; };
 		33FE9E011C3B9BD900E95FB1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33FE9E001C3B9BD900E95FB1 /* ViewController.m */; };
@@ -16,7 +21,6 @@
 		33FE9E141C3B9BD900E95FB1 /* TestAnimationLinearTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 33FE9E131C3B9BD900E95FB1 /* TestAnimationLinearTests.m */; };
 		33FE9E1F1C3B9BD900E95FB1 /* TestAnimationLinearUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 33FE9E1E1C3B9BD900E95FB1 /* TestAnimationLinearUITests.m */; };
 		33FE9E2F1C3BBD6400E95FB1 /* ScrollLabelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33FE9E2D1C3BBD6400E95FB1 /* ScrollLabelViewController.m */; };
-		33FE9E301C3BBD6400E95FB1 /* ScrollLabelViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33FE9E2E1C3BBD6400E95FB1 /* ScrollLabelViewController.xib */; };
 		33FE9E331C3BC09200E95FB1 /* TransitionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33FE9E321C3BC09200E95FB1 /* TransitionViewController.m */; };
 		33FE9E371C3BCA7900E95FB1 /* BaseCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 33FE9E351C3BCA7900E95FB1 /* BaseCollectionViewCell.m */; };
 		33FE9E381C3BCA7900E95FB1 /* BaseCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33FE9E361C3BCA7900E95FB1 /* BaseCollectionViewCell.xib */; };
@@ -44,6 +48,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3305FCD01C3CC2BA00F3367B /* GradientLayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GradientLayerViewController.h; sourceTree = "<group>"; };
+		3305FCD11C3CC2BA00F3367B /* GradientLayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GradientLayerViewController.m; sourceTree = "<group>"; };
+		33117BC11C3CF0AF005177C1 /* BubleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BubleViewController.h; sourceTree = "<group>"; };
+		33117BC21C3CF0AF005177C1 /* BubleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BubleViewController.m; sourceTree = "<group>"; };
+		33714F661C73006200F07B3E /* LoadingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadingViewController.h; sourceTree = "<group>"; };
+		33714F671C73006200F07B3E /* LoadingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadingViewController.m; sourceTree = "<group>"; };
+		33B259281C47802B00C985F3 /* Circle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Circle.h; sourceTree = "<group>"; };
+		33B259291C47802B00C985F3 /* Circle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Circle.m; sourceTree = "<group>"; };
+		33B2592B1C4790D900C985F3 /* PathCircle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PathCircle.h; sourceTree = "<group>"; };
+		33B2592C1C4790D900C985F3 /* PathCircle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PathCircle.m; sourceTree = "<group>"; };
 		33FE9DF61C3B9BD900E95FB1 /* TestAnimation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestAnimation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		33FE9DFA1C3B9BD900E95FB1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		33FE9DFC1C3B9BD900E95FB1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -62,7 +76,6 @@
 		33FE9E201C3B9BD900E95FB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		33FE9E2C1C3BBD6400E95FB1 /* ScrollLabelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollLabelViewController.h; sourceTree = "<group>"; };
 		33FE9E2D1C3BBD6400E95FB1 /* ScrollLabelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollLabelViewController.m; sourceTree = "<group>"; };
-		33FE9E2E1C3BBD6400E95FB1 /* ScrollLabelViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScrollLabelViewController.xib; sourceTree = "<group>"; };
 		33FE9E311C3BC09200E95FB1 /* TransitionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransitionViewController.h; sourceTree = "<group>"; };
 		33FE9E321C3BC09200E95FB1 /* TransitionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransitionViewController.m; sourceTree = "<group>"; };
 		33FE9E341C3BCA7900E95FB1 /* BaseCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseCollectionViewCell.h; sourceTree = "<group>"; };
@@ -114,6 +127,43 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		3305FCCE1C3CC27000F3367B /* 动画 */ = {
+			isa = PBXGroup;
+			children = (
+				33714F661C73006200F07B3E /* LoadingViewController.h */,
+				33714F671C73006200F07B3E /* LoadingViewController.m */,
+				33FE9E311C3BC09200E95FB1 /* TransitionViewController.h */,
+				33FE9E321C3BC09200E95FB1 /* TransitionViewController.m */,
+				3305FCD01C3CC2BA00F3367B /* GradientLayerViewController.h */,
+				3305FCD11C3CC2BA00F3367B /* GradientLayerViewController.m */,
+				33117BC11C3CF0AF005177C1 /* BubleViewController.h */,
+				33117BC21C3CF0AF005177C1 /* BubleViewController.m */,
+				33FE9E3C1C3BD38300E95FB1 /* BaseAnimationController.h */,
+				33FE9E3D1C3BD38400E95FB1 /* BaseAnimationController.m */,
+				33FE9E3F1C3BD70600E95FB1 /* GroupAnimationController.h */,
+				33FE9E401C3BD70600E95FB1 /* GroupAnimationController.m */,
+				33FE9E421C3BD8A600E95FB1 /* KeyFrameAnimationController.h */,
+				33FE9E431C3BD8A600E95FB1 /* KeyFrameAnimationController.m */,
+				33FE9E2C1C3BBD6400E95FB1 /* ScrollLabelViewController.h */,
+				33FE9E2D1C3BBD6400E95FB1 /* ScrollLabelViewController.m */,
+			);
+			name = "动画";
+			sourceTree = "<group>";
+		};
+		3305FCCF1C3CC29100F3367B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				33B259281C47802B00C985F3 /* Circle.h */,
+				33B259291C47802B00C985F3 /* Circle.m */,
+				33B2592B1C4790D900C985F3 /* PathCircle.h */,
+				33B2592C1C4790D900C985F3 /* PathCircle.m */,
+				33FE9E341C3BCA7900E95FB1 /* BaseCollectionViewCell.h */,
+				33FE9E361C3BCA7900E95FB1 /* BaseCollectionViewCell.xib */,
+				33FE9E351C3BCA7900E95FB1 /* BaseCollectionViewCell.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 		33FE9DED1C3B9BD900E95FB1 = {
 			isa = PBXGroup;
 			children = (
@@ -143,21 +193,9 @@
 				33FE9DFD1C3B9BD900E95FB1 /* AppDelegate.m */,
 				33FE9DFF1C3B9BD900E95FB1 /* ViewController.h */,
 				33FE9E001C3B9BD900E95FB1 /* ViewController.m */,
-				33FE9E311C3BC09200E95FB1 /* TransitionViewController.h */,
-				33FE9E321C3BC09200E95FB1 /* TransitionViewController.m */,
-				33FE9E3C1C3BD38300E95FB1 /* BaseAnimationController.h */,
-				33FE9E3D1C3BD38400E95FB1 /* BaseAnimationController.m */,
-				33FE9E3F1C3BD70600E95FB1 /* GroupAnimationController.h */,
-				33FE9E401C3BD70600E95FB1 /* GroupAnimationController.m */,
-				33FE9E421C3BD8A600E95FB1 /* KeyFrameAnimationController.h */,
-				33FE9E431C3BD8A600E95FB1 /* KeyFrameAnimationController.m */,
-				33FE9E2C1C3BBD6400E95FB1 /* ScrollLabelViewController.h */,
-				33FE9E2D1C3BBD6400E95FB1 /* ScrollLabelViewController.m */,
-				33FE9E2E1C3BBD6400E95FB1 /* ScrollLabelViewController.xib */,
+				3305FCCE1C3CC27000F3367B /* 动画 */,
 				33FE9E021C3B9BD900E95FB1 /* Main.storyboard */,
-				33FE9E341C3BCA7900E95FB1 /* BaseCollectionViewCell.h */,
-				33FE9E351C3BCA7900E95FB1 /* BaseCollectionViewCell.m */,
-				33FE9E361C3BCA7900E95FB1 /* BaseCollectionViewCell.xib */,
+				3305FCCF1C3CC29100F3367B /* View */,
 				33FE9E051C3B9BD900E95FB1 /* Assets.xcassets */,
 				33FE9E071C3B9BD900E95FB1 /* LaunchScreen.storyboard */,
 				33FE9E0A1C3B9BD900E95FB1 /* Info.plist */,
@@ -306,7 +344,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				33FE9E301C3BBD6400E95FB1 /* ScrollLabelViewController.xib in Resources */,
 				33FE9E091C3B9BD900E95FB1 /* LaunchScreen.storyboard in Resources */,
 				33FE9E061C3B9BD900E95FB1 /* Assets.xcassets in Resources */,
 				33FE9E381C3BCA7900E95FB1 /* BaseCollectionViewCell.xib in Resources */,
@@ -385,11 +422,16 @@
 			files = (
 				33FE9E441C3BD8A600E95FB1 /* KeyFrameAnimationController.m in Sources */,
 				33FE9E2F1C3BBD6400E95FB1 /* ScrollLabelViewController.m in Sources */,
+				33B2592D1C4790D900C985F3 /* PathCircle.m in Sources */,
+				33714F681C73006200F07B3E /* LoadingViewController.m in Sources */,
 				33FE9E371C3BCA7900E95FB1 /* BaseCollectionViewCell.m in Sources */,
 				33FE9E011C3B9BD900E95FB1 /* ViewController.m in Sources */,
+				33117BC31C3CF0AF005177C1 /* BubleViewController.m in Sources */,
+				3305FCD21C3CC2BA00F3367B /* GradientLayerViewController.m in Sources */,
 				33FE9DFE1C3B9BD900E95FB1 /* AppDelegate.m in Sources */,
 				33FE9E331C3BC09200E95FB1 /* TransitionViewController.m in Sources */,
 				33FE9E3E1C3BD38400E95FB1 /* BaseAnimationController.m in Sources */,
+				33B2592A1C47802C00C985F3 /* Circle.m in Sources */,
 				33FE9E411C3BD70600E95FB1 /* GroupAnimationController.m in Sources */,
 				33FE9DFB1C3B9BD900E95FB1 /* main.m in Sources */,
 			);

@@ -7,6 +7,8 @@
 //
 
 #import "ScrollLabelViewController.h"
+#import "Circle.h"
+#import "PathCircle.h"
 
 @interface ScrollLabelViewController ()
 @property (weak, nonatomic) IBOutlet UIView *backgroundView;
@@ -18,7 +20,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    
+    Circle * circle = [[Circle alloc] initWithFrame:CGRectMake(100, 100, 100, 100)];
+    [self.view addSubview:circle];
+    
+    self.view.backgroundColor = [UIColor grayColor];
+    
+    PathCircle * pathcircle = [[PathCircle alloc] initWithFrame:CGRectMake(100, 250, 200, 200)];
+    [self.view addSubview:pathcircle];
 }
 
 - (void)didReceiveMemoryWarning {

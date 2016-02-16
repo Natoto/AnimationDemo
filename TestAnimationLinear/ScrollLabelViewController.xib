@@ -15,7 +15,7 @@
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <viewController id="xmO-dq-eWt" customClass="ViewController">
+        <viewController id="xmO-dq-eWt" customClass="ScrollLabelViewController">
             <layoutGuides>
                 <viewControllerLayoutGuide type="top" id="0vi-C8-qUc"/>
                 <viewControllerLayoutGuide type="bottom" id="w5L-Sg-8jY"/>
@@ -65,7 +65,7 @@ tv.setTypeface(tf);//设置字体android Typeface使用TTF字体文件设置字�
                         </constraints>
                     </view>
                 </subviews>
-                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                 <constraints>
                     <constraint firstItem="4b2-VI-0n4" firstAttribute="top" secondItem="0qu-NI-TUA" secondAttribute="bottom" constant="8" id="2Kh-7B-Xg8"/>
                     <constraint firstItem="GJb-kI-Vor" firstAttribute="leading" secondItem="fkd-bJ-b2d" secondAttribute="leadingMargin" constant="29" id="Nyb-Dn-sLR"/>
@@ -75,13 +75,12 @@ tv.setTypeface(tf);//设置字体android Typeface使用TTF字体文件设置字�
                     <constraint firstItem="0qu-NI-TUA" firstAttribute="centerY" secondItem="fkd-bJ-b2d" secondAttribute="centerY" id="zYW-Ue-TDO"/>
                 </constraints>
             </view>
-            <navigationItem key="navigationItem" id="xLf-zS-ewZ"/>
             <connections>
                 <outlet property="backgroundView" destination="0qu-NI-TUA" id="5id-Gg-h9h"/>
                 <outlet property="blueView" destination="GJb-kI-Vor" id="A1j-69-aTc"/>
                 <outlet property="lbl_content" destination="I35-gs-D27" id="bVB-kM-PLa"/>
             </connections>
-            <point key="canvasLocation" x="53" y="287"/>
+            <point key="canvasLocation" x="189" y="354"/>
         </viewController>
     </objects>
 </document>
