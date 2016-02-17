@@ -241,6 +241,9 @@ GET_CELL_SELECT_ACTION(cellcellstruct)
     animation.timingFunction = UIViewAnimationOptionCurveEaseInOut;
     
     [view.layer addAnimation:animation forKey:@"animation"];
+    
+    
+    UIView animateWithDuration:<#(NSTimeInterval)#> delay:<#(NSTimeInterval)#> options:<#(UIViewAnimationOptions)#> animations:<#^(void)animations#> completion:<#^(BOOL finished)completion#>
 }
 
 
