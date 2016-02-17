@@ -80,7 +80,6 @@ GET_CELL_SELECT_ACTION(cellstruct)
     anima.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut];//设置动画的节奏
     anima.delegate = self;//设置代理，可以检测动画的开始和结束
     [_demoView.layer addAnimation:anima forKey:@"keyFrameAnimation"];
-    
 }
 
 -(void)viewWillAppear:(BOOL)animated

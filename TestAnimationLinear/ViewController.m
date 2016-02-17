@@ -48,6 +48,7 @@ GET_CELL_STRUCT_WITH(loadingview, 加载动画)
     [self.dataDictionary setObject:self.cell_struct_transition forKey:KEY_INDEXPATH(sectionIndex, rowIndex++)];
     [self.dataDictionary setObject:self.cell_struct_baseanimation forKey:KEY_INDEXPATH(sectionIndex, rowIndex++)];
     [self.dataDictionary setObject:self.cell_struct_keyframeanimation forKey:KEY_INDEXPATH(sectionIndex, rowIndex++)];
+    [self.dataDictionary setObject:self.cell_struct_groupanimation forKey:KEY_INDEXPATH(sectionIndex, rowIndex++)];
     [self.dataDictionary setObject:self.cell_struct_gradientanimation forKey:KEY_INDEXPATH(sectionIndex, rowIndex++)];
     [self.dataDictionary setObject:self.cell_struct_affineanimation forKey:KEY_INDEXPATH(sectionIndex, rowIndex++)];
     [self.dataDictionary setObject:self.cell_struct_compositeanimation forKey:KEY_INDEXPATH(sectionIndex, rowIndex++)];
