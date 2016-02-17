@@ -60,6 +60,10 @@ GET_CELL_STRUCT_WITH(loadingview, 加载动画)
     [self.dataDictionary setObject:self.cell_struct_loadingview forKey:KEY_INDEXPATH(sectionIndex, rowIndex++)];
     
 }
+
+
+
+
 GET_CELL_SELECT_ACTION(cellstruct)
 {
     if (cellstruct == self.cell_struct_transition) {
