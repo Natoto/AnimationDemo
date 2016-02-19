@@ -18,40 +18,41 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self changeBackGroundWithBackImage:[UIImage imageNamed:@"elcaptan"]];
 //    [self normalgradientLayer];
 //    [self testgradientLayer];
     [self testslidetounlock];
     
     self.view.backgroundColor = [UIColor grayColor];
 }
-
+//做颜色渐变
 -(void)testslidetounlock
 {
     UILabel * textLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 100, 200, 30)];
+    textLabel.center = self.view.center;
+    textLabel.textColor = [UIColor colorWithWhite:1 alpha:0.8];
+    textLabel.textAlignment = NSTextAlignmentCenter;
     textLabel.text = @">> 滑动来解锁 >>>";
     [self.view addSubview:textLabel];
-   
-    CAGradientLayer * gradientLayer = [CAGradientLayer  new];
-    gradientLayer.bounds = CGRectMake(0, 0, textLabel.frame.size.width, textLabel.frame.size.height);
-    gradientLayer.position = CGPointMake(textLabel.frame.size.width/2, textLabel.frame.size.height/2);
-    gradientLayer.startPoint = CGPointMake(0,0.5);
-    gradientLayer.endPoint = CGPointMake(1,0.5);
-    gradientLayer.colors = @[
-                            [UIColor blackColor],
-                            [UIColor whiteColor],
-                            [UIColor blackColor]
-                            ];
-    gradientLayer.locations = @[@0.2, @0.5, @0.8];
-    [textLabel.layer addSublayer:gradientLayer];
-    
-    CABasicAnimation * gradient = [CABasicAnimation animationWithKeyPath:@"locations"];
-    gradient.fromValue = @[@0, @0, @0.25];
-    gradient.toValue = @[@0.75, @1, @1];
-    gradient.duration = 2.5;
-    gradient.repeatCount = HUGE;
-    [gradientLayer addAnimation:gradient forKey:nil];//gradient, forKey: nil)
-    gradientLayer.mask = textLabel.layer;
 
+    CAGradientLayer *gradient = [CAGradientLayer layer];
+//    gradient.backgroundColor = [UIColor grayColor].CGColor;
+    gradient.frame = textLabel.bounds;
+    UIColor *startColor = [UIColor whiteColor];
+    UIColor *endColor   = [UIColor clearColor];
+    gradient.colors = @[(id)endColor.CGColor,(id)startColor.CGColor, (id)endColor.CGColor];
+    gradient.startPoint = CGPointMake(0, 0);//(左，下)
+    gradient.endPoint = CGPointMake(1, 0);//(右，下)
+//    [textLabel.layer insertSublayer:gradient atIndex:0];
+    gradient.locations = @[@.2,@.5,@.8];
+    
+    textLabel.layer.mask = gradient;
+    CABasicAnimation * gradientanimation = [CABasicAnimation animationWithKeyPath:@"locations"];
+    gradientanimation.fromValue = @[@0, @0,@0.25];
+    gradientanimation.toValue = @[@0.75,@1 ,@1];
+    gradientanimation.duration = 2.5;
+    gradientanimation.repeatCount = HUGE;
+    [gradient addAnimation:gradientanimation forKey:@"gradientanimation"];//gradient, forKey: nil)
     
 }
 

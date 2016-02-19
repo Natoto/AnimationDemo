@@ -8,11 +8,11 @@
 
 #import "shapeLayerViewController.h"
 
-@interface ProgressLayer : UIView
+@interface ProgressView : UIView
 
 @end
 
-@implementation ProgressLayer
+@implementation ProgressView
 
 -(id)initWithFrame:(CGRect)frame
 {
@@ -20,7 +20,8 @@
     if (self) {
         CAShapeLayer * shapelayer = [CAShapeLayer layer];
     
-        UIBezierPath * path = [UIBezierPath bezierPathWithRoundedRect:frame cornerRadius:frame.size.width/2];
+        UIBezierPath * path = [UIBezierPath bezierPathWithArcCenter:CGPointMake(frame.size.width/2, frame.size.height/2) radius:frame.size.width/2 startAngle:0 endAngle:2*M_PI clockwise:YES];
+        //[UIBezierPath bezierPathWithRoundedRect:frame cornerRadius:frame.size.width/2];
         //路径
         shapelayer.path = path.CGPath;
         //填充色
@@ -32,12 +33,12 @@
         [self.layer addSublayer:shapelayer];
         
         //设置stroke起始点
-        shapelayer.strokeStart = 0;
-        shapelayer.strokeEnd = 0.75;
+//        shapelayer.strokeStart = 0;
+//        shapelayer.strokeEnd = 0.75;
         
         CABasicAnimation * anima = [CABasicAnimation animationWithKeyPath:@"strokeEnd"];
         anima.fromValue = [NSNumber numberWithFloat:0.f];
-        anima.toValue = [NSNumber numberWithFloat:0.75f];
+        anima.toValue = [NSNumber numberWithFloat:1.f];
         anima.duration = 4.0f;
         anima.repeatCount = MAXFLOAT;
         anima.timingFunction = UIViewAnimationOptionCurveEaseInOut;
@@ -63,7 +64,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    ProgressLayer * layer = [[ProgressLayer alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
+    ProgressView * layer = [[ProgressView alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
     layer.center = self.view.center;
     [self.view addSubview:layer];
 //    layer.backgroundColor = [UIColor grayColor];
