@@ -215,10 +215,7 @@ GET_CELL_SELECT_ACTION(cellcellstruct)
         [self addBgImageWithImageName:IMAGE2];
         i = 0;
     }
-    
 }
-
-
 
 #pragma CATransition动画实现
 - (void) transitionWithType:(NSString *) type WithSubtype:(NSString *) subtype ForView : (UIView *) view
@@ -242,8 +239,6 @@ GET_CELL_SELECT_ACTION(cellcellstruct)
     
     [view.layer addAnimation:animation forKey:@"animation"];
     
-    
-    UIView animateWithDuration:<#(NSTimeInterval)#> delay:<#(NSTimeInterval)#> options:<#(UIViewAnimationOptions)#> animations:<#^(void)animations#> completion:<#^(BOOL finished)completion#>
 }
 
 

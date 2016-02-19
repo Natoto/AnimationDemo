@@ -15,7 +15,7 @@
 #import "GradientLayerViewController.h"
 #import "ScrollLabelViewController.h"
 #import "LoadingViewController.h"
-
+#import "shapeLayerViewController.h"
 @interface ViewController ()
 AS_CELL_STRUCT_COMMON(transition)
 AS_CELL_STRUCT_COMMON(baseanimation)
@@ -26,6 +26,7 @@ AS_CELL_STRUCT_COMMON(compositeanimation)
 AS_CELL_STRUCT_COMMON(gradientanimation)
 AS_CELL_STRUCT_COMMON(scrolllabel)
 AS_CELL_STRUCT_COMMON(loadingview)
+AS_CELL_STRUCT_COMMON(shapelayer)
 @end
 
 
@@ -38,6 +39,7 @@ GET_CELL_STRUCT_WITH(affineanimation, 仿射变幻)
 GET_CELL_STRUCT_WITH(compositeanimation, 综合动画)
 GET_CELL_STRUCT_WITH(gradientanimation, 渐变色)
 GET_CELL_STRUCT_WITH(scrolllabel, text)
+GET_CELL_STRUCT_WITH(shapelayer, CAShapeLayer)
 GET_CELL_STRUCT_WITH(loadingview, 加载动画)
 
 - (void)viewDidLoad {
@@ -56,7 +58,7 @@ GET_CELL_STRUCT_WITH(loadingview, 加载动画)
     sectionIndex++;
     rowIndex = 0;
     [self.dataDictionary setObject:self.cell_struct_gradientanimation forKey:KEY_INDEXPATH(sectionIndex, rowIndex++)];
-    [self.dataDictionary setObject:self.cell_struct_scrolllabel forKey:KEY_INDEXPATH(sectionIndex, rowIndex++)];
+    [self.dataDictionary setObject:self.cell_struct_shapelayer forKey:KEY_INDEXPATH(sectionIndex, rowIndex++)];
     [self.dataDictionary setObject:self.cell_struct_loadingview forKey:KEY_INDEXPATH(sectionIndex, rowIndex++)];
     
 }
@@ -97,6 +99,11 @@ GET_CELL_SELECT_ACTION(cellstruct)
     else if(cellstruct == self.cell_struct_loadingview)
     {
         LoadingViewController * ctr = [LoadingViewController new];
+        [self.navigationController pushViewController:ctr animated:YES];
+    }
+    else if(cellstruct == self.cell_struct_shapelayer)
+    {
+        shapeLayerViewController * ctr = [shapeLayerViewController new];
         [self.navigationController pushViewController:ctr animated:YES];
     }
 }
