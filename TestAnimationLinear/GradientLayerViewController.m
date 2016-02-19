@@ -38,7 +38,7 @@
     CAGradientLayer *gradient = [CAGradientLayer layer];
 //    gradient.backgroundColor = [UIColor grayColor].CGColor;
     gradient.frame = textLabel.bounds;
-    UIColor *startColor = [UIColor whiteColor];
+    UIColor *startColor = [UIColor blackColor];
     UIColor *endColor   = [UIColor clearColor];
     gradient.colors = @[(id)endColor.CGColor,(id)startColor.CGColor, (id)endColor.CGColor];
     gradient.startPoint = CGPointMake(0, 0);//(左，下)
@@ -52,6 +52,7 @@
     gradientanimation.toValue = @[@0.75,@1 ,@1];
     gradientanimation.duration = 2.5;
     gradientanimation.repeatCount = HUGE;
+//    gradientanimation.autoreverses = YES;//原路径返回
     [gradient addAnimation:gradientanimation forKey:@"gradientanimation"];//gradient, forKey: nil)
     
 }
